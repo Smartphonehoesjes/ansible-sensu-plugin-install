@@ -1,0 +1,2 @@
+sensu_plugin_install_gem: /opt/sensu/embedded/bin/gem
+sensu_client_github_url_base: https://github.com/{{ sensu_client_github_url_base_infix }}/{{ sensu_client_github_url_base_infix }}-

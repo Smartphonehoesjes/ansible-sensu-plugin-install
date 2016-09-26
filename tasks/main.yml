@@ -1,0 +1,16 @@
+- name: get installed sensu-plugins
+  command: "{{ sensu_plugin_install_gem }} list --local"
+  register: installed_plugins
+  changed_when: false
+
+- name: be sure sensu-plugins-{{ item.name }} is installed
+  command: sensu-install -p {{ item.name }}:{{ item.version }}
+  when: "'sensu-plugins-{{ item.name }} ({{ item.version }})' not in installed_plugins.stdout"
+  with_items: "{{ sensu_plugin_install }}"
+
+- name: be sure sys-filesystem gem is installed
+  gem:
+    name: sys-filesystem
+    state: latest
+    user_install: no
+    executable: "{{ sensu_plugin_install_gem }}"

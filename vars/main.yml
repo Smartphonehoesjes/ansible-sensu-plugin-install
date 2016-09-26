@@ -1,0 +1,2 @@
+---
+sensu_plugin_install_gem: /opt/sensu/embedded/bin/gem
