@@ -15,5 +15,5 @@
         version: 1.0.0
 
   roles:
-    - role_under_test
     - 030.sensu-install
+    - role_under_test
