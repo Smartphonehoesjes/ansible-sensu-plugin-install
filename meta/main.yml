@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: 030
+  description: Installs sensu-plugins
+  license: 'MIT'
+  min_ansible_version: 2.1.0.0
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  - name: Ubuntu
+    versions:
+    - xenial
+  galaxy_tags:
+    - monitoring
+    - sensu-plugins
+
+dependencies: []
