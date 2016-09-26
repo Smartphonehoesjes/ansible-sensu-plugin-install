@@ -1,0 +1,4 @@
+- name: build-essential is installed
+  apt:
+    name: build-essential
+    state: latest

@@ -1,3 +1,9 @@
+- include: RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: Debian.yml
+  when: ansible_os_family == 'Debian'
+
 - name: get installed sensu-plugins
   command: "{{ sensu_plugin_install_gem }} list --local"
   register: installed_plugins
