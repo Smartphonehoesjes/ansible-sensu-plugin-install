@@ -2,7 +2,7 @@
 - hosts: localhost
 
   vars:
-    sensu_client_plugins:
+    sensu_plugin_install:
       - name: cpu-checks
         version: 1.0.0
       - name: disk-checks
